@@ -1,1 +1,14 @@
-GET https://project1-1vo2.onrender.com/contacts
+//LOCALHOST
+#All
+GET http://localhost:3000/contacts
+
+#By id
+GET http://localhost:3000/contacts/659efcd2ae244efa3a5ee0e0
+
+#Create a contact
+POST http://localhost:3000/contacts
+
+
+//ONLINE
+GET http://project1-1vo2.onrender.com/contacts
+POST http://project1-1vo2.onrender.com/contacts
