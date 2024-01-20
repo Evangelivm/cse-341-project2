@@ -31,34 +31,3 @@ content-Type: application/json
 
 ###Delete a contact
 DELETE http://localhost:3000/contacts/65a5fb29e8547b67385ecc56
-
-//ONLINE
-###Get Contacts
-GET https://project1-1vo2.onrender.com/contacts
-
-###By id
-GET https://project1-1vo2.onrender.com/contacts/659efcd2ae244efa3a5ee0e0
-
-###Create a contact
-POST https://project1-1vo2.onrender.com/contacts HTTP/1.1
-content-type: application/json
-
-{
-    "firstName" : "Jane",
-    "lastName" : "Doe",
-    "email" : "janedoe@email.com",
-    "favoriteColor" : "purple",
-    "birthday" : "12/12/1997"
-}
-
-###Update contact info
-PUT https://project1-1vo2.onrender.com/contacts/65a5fb28e8547b67385ecc55 HTTP/1.1
-content-Type: application/json
-
-{
-    "firstName" : "Jane",
-    "lastName" : "Doe",
-    "email" : "janedoe2@email.com",
-    "favoriteColor" : "purple",
-    "birthday" : "12/12/1997"
-}
