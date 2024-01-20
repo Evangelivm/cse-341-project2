@@ -33,7 +33,7 @@ content-Type: application/json
 DELETE http://localhost:3000/contacts/65a5fb29e8547b67385ecc56
 
 //ONLINE
-###Otherrs
-GET https://project1-1vo2.onrender.com/contacts
+###Others
+GET http://project1-1vo2.onrender.com/contacts
 ###
 POST http://project1-1vo2.onrender.com/contacts
