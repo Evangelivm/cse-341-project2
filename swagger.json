@@ -5,7 +5,7 @@
     "description": "User Api",
     "version": "1.0.0"
   },
-  "host": "project1-1vo2.onrender.com",
+  "host": "project2-1vo2.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

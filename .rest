@@ -36,13 +36,13 @@ DELETE http://localhost:3000/contacts/65a5fb29e8547b67385ecc56
 
 //Online
 ###All
-GET https://project1-1vo2.onrender.com/contacts
+GET https://project2-1vo2.onrender.com/contacts
 
 ###By id
-GET https://project1-1vo2.onrender.com/contacts/659efcd2ae244efa3a5ee0e0
+GET https://project2-1vo2.onrender.com/contacts/659efcd2ae244efa3a5ee0e0
 
 ###Create a contact
-POST https://project1-1vo2.onrender.com/contacts HTTP/1.1
+POST https://project2-1vo2.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
@@ -54,7 +54,7 @@ content-type: application/json
 }
 
 ###Update contact info
-PUT https://project1-1vo2.onrender.com/contacts/659efcd2ae244efa3a5ee0e0 HTTP/1.1
+PUT https://project2-1vo2.onrender.com/contacts/659efcd2ae244efa3a5ee0e0 HTTP/1.1
 content-Type: application/json
 
 {
@@ -66,4 +66,4 @@ content-Type: application/json
 }
 
 ###Delete a contact
-DELETE https://project1-1vo2.onrender.com/contacts/65ac8107d50ce926f73c7ed7
+DELETE https://project2-1vo2.onrender.com/contacts/65ac8107d50ce926f73c7ed7
