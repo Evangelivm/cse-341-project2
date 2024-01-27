@@ -40,7 +40,7 @@ const createTeamMem = async (req, res) => {
     if (response.acknowledged) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error courred while updating the user.')
+        res.status(500).json(response.error || 'Some error courred while creating the team member.')
     }
 };
 
@@ -63,7 +63,7 @@ const updateTeamMem = async (req, res) => {
     if (response.modifiedCount > 0) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error courred while updating the user.')
+        res.status(500).json(response.error || 'Some error courred while updating the team member.')
     }
 };
 
@@ -78,7 +78,7 @@ const deleteTeamMem = async (req, res) => {
     if (response.acknowledged) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error courred while updating the user.')
+        res.status(500).json(response.error || 'Some error courred while deleting the team member.')
     }
 };
 

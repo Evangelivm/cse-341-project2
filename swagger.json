@@ -5,10 +5,10 @@
     "description": "Projects Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "project2-8jro.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http","https"
   ],
   "paths": {
     "/": {
@@ -20,16 +20,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }

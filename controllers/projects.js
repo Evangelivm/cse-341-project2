@@ -42,7 +42,7 @@ const createProj = async (req, res) => {
     if (response.acknowledged) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error courred while updating the user.')
+        res.status(500).json(response.error || 'Some error courred while creating the project.')
     }
 };
 
@@ -67,7 +67,7 @@ const updateProj = async (req, res) => {
     if (response.modifiedCount > 0) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error courred while updating the user.')
+        res.status(500).json(response.error || 'Some error courred while updating the project.')
     }
 };
 
@@ -82,7 +82,7 @@ const deleteProj = async (req, res) => {
     if (response.acknowledged) {
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || 'Some error courred while updating the user.')
+        res.status(500).json(response.error || 'Some error courred while deleting the project.')
     }
 };
 
