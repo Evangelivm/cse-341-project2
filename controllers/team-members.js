@@ -14,6 +14,9 @@ const getAll = async (req, res) => {
 const getSingle = async (req, res) => {
     //#swagger.tags=['Team Members']
     //#swagger.summary= Get a team member by id
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid team member id to find a team member.');
+      }
     const teamMemId = new ObjectId(req.params.id)
     const result = await mongodb.getDatabase().db('system-project').collection('team-members').find({_id:teamMemId});
     result.toArray().then((TeamMem) => {
@@ -44,6 +47,9 @@ const createTeamMem = async (req, res) => {
 const updateTeamMem = async (req, res) => {
     //#swagger.tags=['Team Members']
     //#swagger.summary= Modify a team member by id
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid team member id to update a team member.');
+      }
     const teamMemId = new ObjectId(req.params.id);
     const teamMem = {
         name : req.body.name,
@@ -64,6 +70,9 @@ const updateTeamMem = async (req, res) => {
 const deleteTeamMem = async (req, res) => {
     //#swagger.tags=['Team Members']
     //#swagger.summary= Delete a team member by id
+    if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Must use a valid team member id to delete a team member.');
+      }
     const teamMemId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().db('system-project').collection('team-members').deleteOne({_id:teamMemId}, true);
     if (response.acknowledged) {
