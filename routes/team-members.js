@@ -7,9 +7,9 @@ const validation = require('../middleware/validate');
 
 router.get('/', teamController.getAll);
 router.get('/:id', teamController.getSingle);
-router.post('/', teamController.createTeamMem);
-router.put('/:id', teamController.updateTeamMem);
-router.delete('/:id', teamController.deleteTeamMem);
+router.post('/', isAuthenticated, validation.saveTeamMem ,teamController.createTeamMem);
+router.put('/:id', isAuthenticated, validation.saveTeamMem ,teamController.updateTeamMem);
+router.delete('/:id', isAuthenticated, teamController.deleteTeamMem);
 
 
 module.exports = router;
