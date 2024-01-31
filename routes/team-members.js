@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const teamController = require('../controllers/team-members');
+const {isAuthenticated} = require("../middleware/authenticate");
+const validation = require('../middleware/validate');
 
 router.get('/', teamController.getAll);
 router.get('/:id', teamController.getSingle);

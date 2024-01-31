@@ -3,6 +3,7 @@ const router = express.Router();
 
 const tasksController = require('../controllers/tasks');
 const validation = require('../middleware/validate');
+const {isAuthenticated} = require("../middleware/authenticate");
 
 router.get('/', tasksController.getAll);
 router.get('/:id', tasksController.getSingle);
